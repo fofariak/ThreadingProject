@@ -36,10 +36,10 @@ public class MultiThread implements Runnable {
 	{
 		System.out.println("Free memory (bytes): " + 
 	    Runtime.getRuntime().freeMemory());
-		MultiThread message1 = new MultiThread("Ping");
-		MultiThread message2 = new MultiThread("Pong");
-		MultiThread message3 = new MultiThread("Ding");
-		MultiThread message4 = new MultiThread("Dong");
+		MultiThread message1 = new MultiThread("Thread1");
+		MultiThread message2 = new MultiThread("Thread2");
+		MultiThread message3 = new MultiThread("Thread3");
+		MultiThread message4 = new MultiThread("Thread4");
 		message1.thread.join();
 		message2.thread.join();
 		message3.thread.join();
@@ -49,17 +49,3 @@ public class MultiThread implements Runnable {
 	}
 }
 
-//class Value{
-//	static long val = 0;
-//	public Value(){		
-//	}
-//	
-//	public void increment(String threadName){
-//		val ++;
-//	}
-//	
-//	public String toString(){
-//		String str = "{ \"Val\": \" "+ this.val + "\"}";
-//		JSONObject obj = new JSONObject(str);
-//	}
-//}
